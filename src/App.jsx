@@ -1,32 +1,44 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
 import './App.css'
 
 function App() {
-  const [count, setCount] = useState(0)
 
   return (
     <div className="App">
-      <div>
-        <a href="https://vitejs.dev" target="_blank">
-          <img src="/vite.svg" className="logo" alt="Vite logo" />
-        </a>
-        <a href="https://reactjs.org" target="_blank">
-          <img src={reactLogo} className="logo react" alt="React logo" />
-        </a>
+      <div className='navbar'>
+        <img src='src/assets/cloud_sun_sunny_weather_icon.svg' alt='logo weatherApp' />
+        <p>Weather App</p>
       </div>
-      <h1>Vite + React</h1>
-      <div className="card">
-        <button onClick={() => setCount((count) => count + 1)}>
-          count is {count}
-        </button>
-        <p>
-          Edit <code>src/App.jsx</code> and save to test HMR
-        </p>
+      <form className='searchbar'>
+        <label>Find your city</label>
+        <input id='input-form-city'></input>
+        <input id='button-search' type='button' value={`Search`}></input>
+      </form>
+      <div className='data'>
+        <div className='data-current'>
+          <p className='title'>Current</p>
+          <div id='container-current'>
+            <div id='current-first'>
+              <p>Date</p>
+              <p>City</p>
+            </div>
+            <div id='current-second'>
+              <div className='current-info'>
+                <p>Max</p>
+                <p>Min</p>
+                <p>Wind Speed</p>
+              </div>
+              <div className='current-info'>
+                <p>Imagen</p>
+                <p>Temperature</p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div className='data-forecast'>
+          <p>Forecast</p>
+          <div id='container-forecast'></div>
+        </div>
       </div>
-      <p className="read-the-docs">
-        Click on the Vite and React logos to learn more
-      </p>
     </div>
   )
 }
