@@ -5,7 +5,7 @@
   text-align: center;
 } */
 
-@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;700&display=swap');
 
 body {
   margin: 0;
@@ -72,11 +72,13 @@ body {
   display: flex;
   flex-direction: column;
   color: #ffffff;
-  
 }
 
 .title {
   color: black;
+  padding: 0;
+  margin: 0;
+  font-weight: 700;
 }
 
 #container-current {
@@ -106,4 +108,25 @@ body {
   display: flex;
   flex-direction: column;
   justify-content: space-around;
+}
+
+.data-forecast {
+  display: flex;
+  flex-direction: column;
+  color: #ffffff;
+}
+
+#container-forecast {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  width: 343px;
+  height: 223px;
+  background: #487FB1;
+  border-radius: 5px;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+}
+
+.info-column-item {
+  font-size: 10px;
 }
